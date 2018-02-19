@@ -1,0 +1,839 @@
+﻿@model IEnumerable<BackendSkillAssessment.Models.Property.PropertyViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Properties</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SaleCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PriorMultiApnCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LandUseCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HeatingCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuildingArea)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RoofTypeCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TaxAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RoofCoverCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResidentalModel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FireplaceCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Zoning)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DepthFootage)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fireplace)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LivingSpace)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HalfBaths)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GroundFloor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MortgageAssumptionAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EffectiveYearBuilt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ParsedRange)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AppraisedLandValue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CalculatedLandValue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ViewCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PriorTransactionId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Section)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GarageCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MortgageTerm)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MobileHome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PriorMultiApnCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MultiApnCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ParkingSpaces)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pool)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondMortgageDeedTypeCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CensusTract)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BathFixtures)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Basement)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SaleDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MortgageDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ConstructionCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MultiApnCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PriorMortgageAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CalculatedLandValueCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PriorSaleDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FrontFootage)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bedrooms)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ElectricityCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MarketLandValue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PriorRecordingDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Acreage)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Units)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AppraisedTotalValue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalBathsCalculated)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AssessedImprovementValue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalRooms)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fireplaces)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FlooringCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FipsSubCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeedTypeCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LenderName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PriorDeedCategoryCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CalculatedTotalValue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Longitude)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalBaths)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PoolCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuildingAreaCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SewerCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AssessedLandValue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondMortgageLoanTypeCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ExteriorWallCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PropertyIndicatorCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CalculatedImprovementValue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RecordingDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ParkingCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SquareFootage)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeedCategoryCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Latitude)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QualityCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MarketImprovementValue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PriorSaleCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuildingCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PriorDocumentYear)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AssessedTotalValue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PostDirectional)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AdjustedGross)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CalculatedImprovementValueCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SellerName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ConditionCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MortgageLoanTypeCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CountyLandUse1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NumberOfBuildings)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CountyLandUse2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FuelCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TransactionId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ThreeQuarterBaths)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Predirectional)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondMortgageAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SalePrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UniversalBuilding)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuildingStyleCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OriginalApn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GarageOrParking)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StoriesCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MortgageDueDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TransactionId1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FipsCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MarketTotalValue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OneQuarterBaths)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WaterCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LenderCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UnformattedApn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FullBaths)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MortgageDeedTypeCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AirConditioningCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FormattedApn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FoundationCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.YearBuilt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PriorSalePrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BasementCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Range)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DocumentYear)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ImprovementCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MortgageAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Stories)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QuarterSection)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RoofFramingCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LocationInfluenceCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gross)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AppraisedImprovementValue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ApnSequenceNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HomesteadExempt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CalculatedTotalValueCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TaxYear)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MortgageTermCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SuiteName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SuiteRange)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PropertyResults)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriorMultiApnCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LandUseCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeatingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuildingArea)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoofTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoofCoverCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResidentalModel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FireplaceCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zoning)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepthFootage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fireplace)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LivingSpace)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HalfBaths)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroundFloor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MortgageAssumptionAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EffectiveYearBuilt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParsedRange)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppraisedLandValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalculatedLandValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViewCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriorTransactionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Section)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GarageCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MortgageTerm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobileHome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriorMultiApnCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MultiApnCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParkingSpaces)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pool)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondMortgageDeedTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CensusTract)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BathFixtures)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Basement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MortgageDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConstructionCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MultiApnCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriorMortgageAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalculatedLandValueCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriorSaleDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrontFootage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bedrooms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ElectricityCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketLandValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriorRecordingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acreage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Units)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppraisedTotalValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalBathsCalculated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssessedImprovementValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalRooms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fireplaces)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlooringCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FipsSubCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeedTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LenderName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriorDeedCategoryCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalculatedTotalValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Longitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalBaths)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoolCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuildingAreaCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SewerCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssessedLandValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondMortgageLoanTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExteriorWallCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyIndicatorCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalculatedImprovementValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecordingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParkingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SquareFootage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeedCategoryCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Latitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QualityCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketImprovementValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriorSaleCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuildingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriorDocumentYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssessedTotalValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostDirectional)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdjustedGross)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalculatedImprovementValueCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SellerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConditionCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MortgageLoanTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountyLandUse1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfBuildings)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountyLandUse2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FuelCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThreeQuarterBaths)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Predirectional)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondMortgageAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalePrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UniversalBuilding)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuildingStyleCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OriginalApn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GarageOrParking)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoriesCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MortgageDueDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionId1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FipsCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketTotalValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OneQuarterBaths)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WaterCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LenderCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnformattedApn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullBaths)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MortgageDeedTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AirConditioningCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FormattedApn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FoundationCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YearBuilt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriorSalePrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BasementCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Range)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocumentYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImprovementCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MortgageAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stories)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuarterSection)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoofFramingCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationInfluenceCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gross)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppraisedImprovementValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApnSequenceNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HomesteadExempt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalculatedTotalValueCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MortgageTermCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SuiteName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SuiteRange)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyResults)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PropertyId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PropertyId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PropertyId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

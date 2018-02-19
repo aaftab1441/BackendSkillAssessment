@@ -1,0 +1,9 @@
+C:\Users\Aftab Ahmed\source\repos\BackendSkillAssessment\BackendSkillAssessment.EntityFrameworkCore\bin\Debug\netcoreapp2.0\BackendSkillAssessment.EntityFrameworkCore.deps.json
+C:\Users\Aftab Ahmed\source\repos\BackendSkillAssessment\BackendSkillAssessment.EntityFrameworkCore\bin\Debug\netcoreapp2.0\BackendSkillAssessment.EntityFrameworkCore.dll
+C:\Users\Aftab Ahmed\source\repos\BackendSkillAssessment\BackendSkillAssessment.EntityFrameworkCore\obj\Debug\netcoreapp2.0\BackendSkillAssessment.EntityFrameworkCore.csprojResolveAssemblyReference.cache
+C:\Users\Aftab Ahmed\source\repos\BackendSkillAssessment\BackendSkillAssessment.EntityFrameworkCore\obj\Debug\netcoreapp2.0\BackendSkillAssessment.EntityFrameworkCore.csproj.CoreCompileInputs.cache
+C:\Users\Aftab Ahmed\source\repos\BackendSkillAssessment\BackendSkillAssessment.EntityFrameworkCore\obj\Debug\netcoreapp2.0\BackendSkillAssessment.EntityFrameworkCore.AssemblyInfoInputs.cache
+C:\Users\Aftab Ahmed\source\repos\BackendSkillAssessment\BackendSkillAssessment.EntityFrameworkCore\obj\Debug\netcoreapp2.0\BackendSkillAssessment.EntityFrameworkCore.AssemblyInfo.cs
+C:\Users\Aftab Ahmed\source\repos\BackendSkillAssessment\BackendSkillAssessment.EntityFrameworkCore\bin\Debug\netcoreapp2.0\BackendSkillAssessment.EntityFrameworkCore.pdb
+C:\Users\Aftab Ahmed\source\repos\BackendSkillAssessment\BackendSkillAssessment.EntityFrameworkCore\obj\Debug\netcoreapp2.0\BackendSkillAssessment.EntityFrameworkCore.dll
+C:\Users\Aftab Ahmed\source\repos\BackendSkillAssessment\BackendSkillAssessment.EntityFrameworkCore\obj\Debug\netcoreapp2.0\BackendSkillAssessment.EntityFrameworkCore.pdb
